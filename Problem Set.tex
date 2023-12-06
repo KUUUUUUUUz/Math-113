@@ -1,0 +1,213 @@
+
+\documentclass{article}
+
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage{thmtools}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{framed}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+
+\definecolor{bubblegum}{rgb}{0.99, 0.76, 0.8}
+
+\colorlet{LightGray}{White!90!Periwinkle}
+\colorlet{LightOrange}{bubblegum!20}
+\colorlet{LightGreen}{Green!15}
+\colorlet{LightBlue}{Blue!5}
+\colorlet{LightYellow}{Yellow!15}
+\colorlet{LightRed}{Red!15}
+
+
+
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+
+\declaretheoremstyle[name=Theorem,]{thmsty}
+\declaretheorem[style=thmsty,numberwithin=section]{theorem}
+\tcolorboxenvironment{theorem}{colback=LightGray}
+
+\declaretheoremstyle[name=Proof,]{prosty}
+\declaretheorem[style=prosty,numberlike=theorem]{Proof}
+\tcolorboxenvironment{Proof}{colback=LightOrange}
+
+\declaretheoremstyle[name=Example,]{prcpsty}
+\declaretheorem[style=prcpsty,numberlike=theorem]{Example}
+\tcolorboxenvironment{Example}{colback=LightGreen}
+
+\declaretheoremstyle[name=Def]{prcpsty}
+\declaretheorem[style=prcpsty,numberlike=theorem]{Def}
+\tcolorboxenvironment{Def}{colback=LightYellow}
+
+
+\declaretheoremstyle[name=Problem,]{prcpsty}
+\declaretheorem[style=prcpsty,numberlike=no]{Problem}
+\tcolorboxenvironment{Problem}{colback=LightGreen}
+
+\declaretheoremstyle[name=Solution,]{prcpsty}
+\declaretheorem[style=prcpsty,numberlike=no]{Solution}
+\tcolorboxenvironment{Solution}{colback=LightBlue}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=NavyBlue
+    }
+]{thmblueline}
+\declaretheorem[style=thmblueline, numbered=no, name=Note]{note}
+
+
+
+\setstretch{1.2}
+\geometry{
+    textheight=9in,
+    textwidth=5.5in,
+    top=1in,
+    headheight=12pt,
+    headsep=25pt,
+    footskip=30pt
+}
+\newcommand\N{\ensuremath{\mathbb{N}}}
+\newcommand\R{\ensuremath{\mathbb{R}}}
+\newcommand\Z{\ensuremath{\mathbb{Z}}}
+\renewcommand\O{\ensuremath{\emptyset}}
+\newcommand\Q{\ensuremath{\mathbb{Q}}}
+\newcommand\C{\ensuremath{\mathbb{C}}}
+
+\begin{document}
+
+
+
+\title{ \normalsize \textsc{}
+		\\ [2.0cm]
+		\HRule{1.5pt} \\
+		\LARGE \textbf{\uppercase{Abstract Algebra Problem set}
+		\HRule{2.0pt} \\ [0.6cm] \LARGE{} \vspace*{10\baselineskip}}
+		}
+\date{}
+\author{\textbf{Author} \\ 
+		Persy \\}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+
+
+
+
+% ------------------------------------------------------------------------------
+
+\section{Sec 22 and 23}
+\begin{Problem}
+    Section 22.Problem 27
+\end{Problem}
+\begin{Solution}
+    
+\end{Solution}
+
+\begin{Problem}
+    Section 22.Problem 31
+\end{Problem}
+
+\begin{Solution}
+    
+\end{Solution}
+\newpage
+% ------------------------------------------------------------------------------
+
+\section{Sec 18 and 19}
+\begin{Problem}
+    \textbf{Section 18. Problem 23.}
+    Describe all homomorphism from $\Z \rightarrow \Z$
+\end{Problem}
+
+\begin{Solution}
+    There are infinite group homomorphism. 
+    \\ Look at $\phi(ab) \phi(a) * \phi(b)$
+    \\ $\phi(1) = n$
+    \\  $\phi(1*a)  = \phi(a) =  \phi(1) + .. \phi(1) = a*n = an$
+    \\ $\phi(1*a)  = \phi(a) * \phi(1) = n * an$ Thus must have $an = nan$
+    \\ Thus either $\phi(1) = 1 $ or $\phi(1) = 0$
+\end{Solution}
+
+\begin{Problem}
+\textbf{Section 18 Problem 24 and 25}
+    (1) Describe all ring homomorphisms of $\Z$ onto $\Z \times \Z$
+    \\(2) Describe all  all ring homomorphisms $\Z \times \Z$
+\end{Problem}
+
+\begin{Solution}
+    \textbf{(1) }Similar reasoning. 
+    \\$\phi(1) = (0,0)$, $\phi(1) = (1,0)$, $\phi(1) = (1,1)$, $\phi(1) = (0,1)$
+
+    \textbf{(2)} The only well defined maps are:
+    \\$\phi(m,n) = m$,$\phi(m,n) = n$, $\phi(m,n) = n+m$, $\phi(m,n) = 0$
+    \\ The first two are checked in Q23. The last is trivial homomorphism. 
+    \\ We can construct a counter example for the third. Thus only 3. 
+\end{Solution}
+\begin{Problem}
+    \textbf{Section 18. Problem 38.}
+    Show that $a^2 - b^2 = (a+b)(a-b)$ for all a and b in ring R if and only if R is commutative. 
+\end{Problem}
+
+\begin{Solution}
+Consider $(a+b)(a-b) = a^2 -ab + ba -b^2.$ 
+\\Commutative implies ab = ba.
+\end{Solution}
+
+\begin{Problem}
+\textbf{Section18: Problem 41}
+    An element a of a ring R is nilpotent if $a^n = 0 $ for some $n \in \Z^+$ Show that a and b are nilpotent elems of a comuutative ring, then $a+b $ also nilpotent.
+\end{Problem}
+
+\begin{Solution}
+    
+\end{Solution}
+
+
+\begin{Problem}
+    \textbf{Section 18: Problem 55}
+    A ring a boolean ring if $a^2 = a$ for all$ a \in R$ so that every element is idempotent. Show that every boolean ring is commutative. 
+\end{Problem}
+
+
+
+\begin{Solution}
+    
+\end{Solution}
+
+
+\begin{Problem}
+    \textbf{Section 19: Probelm 24}
+    \\Show that an intersection of subdomains of an integral domain D is again a subdomain D. 
+\end{Problem}
+\begin{Solution}
+    Solution: Sub-integral domain share unity. -----unf
+\end{Solution}
+
+
+% ------------------------------------------------------------------------------
+
+
+\section{Sec 15}
+
+\begin{Problem}
+    Classify the group $(\Z_4 \times \Z_4)/<(1,2)>$
+\end{Problem}
+\begin{Solution}
+    Solution: $<(1,2)> = (1,2), (2,0),(3,2),(0,0)$ order 4.
+    \\Ord($\frac{16}{4}$)= Ord(4). Order 4 groups are only $\Z_2\times\Z_2$ or $\Z_4$. Thus we check if our quotient group has order 4 elements.
+    \\Take element $(1,1) +<(1,2)> \Rightarrow 4(1,1) +<(1,2)> = <(1,2)>$ which is order 4. 
+\end{Solution}
+\end{document}
+% ------------------------------------------------------------------------------
+
